@@ -5,7 +5,7 @@
 #include "LinkList.h"
 
 
-int main()
+int _tmain(int argc, _TCHAR* argv[])
 {
 	LinkList<int> l;
 	for (int i = 1; i < 8; i++){

@@ -16,7 +16,7 @@ public:
 	bool Delete(int location);
 	void showList();
 	//πÈ≤¢≈≈–Ú
-	//LinkList<T> mergeList(LinkList<T> la, LinkList<T> lb);
+	LinkList<T> mergeList(LinkList<T> la, LinkList<T> lb);
 	//¡¥±ÌƒÊ÷√
 	LinkList<T> Reverse();
 	//‘≠µÿƒÊ÷√
@@ -36,8 +36,7 @@ LinkList<T>::LinkList()
 template <class T>
 LinkList<T> LinkList<T>:: Reverse()
 {
-	LinkList<T> lb;
-	LinkList<T> lc;
+	/*LinkList<T> lb;
 	node<T> *p;
 	node<T> *q = lc.head;
 	node<T> *s;
@@ -49,6 +48,13 @@ LinkList<T> LinkList<T>:: Reverse()
 		p->next = n;
 		q->next = p;
 		q = lc.head;
+	}*/
+	LinkList<T> lc;
+	node<T> *p = head->next;
+	while (p!=NULL)
+	{
+		lc.HeadInsert(p->data);
+		p = p->next;
 	}
 	return lc;
 }
@@ -75,7 +81,6 @@ void LinkList<T>:: reverse()
 	head->next = s;
 }
 
-
 template <class T>
 bool LinkList<T>::HeadInsert(T data)
 {
@@ -84,6 +89,7 @@ bool LinkList<T>::HeadInsert(T data)
 	q->next = p->next;
 	p->next = q;
 	length++;
+	return true;
 }
 
 template <class T>
@@ -159,7 +165,6 @@ void LinkList<T>::showList()
 	}
 	cout << endl;
 }
-
 
 template <class T>
 LinkList<T>::~LinkList()
