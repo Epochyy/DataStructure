@@ -4,4 +4,5 @@
 + 链表 LinkList
 + 栈 Stack
 + 队列 Queue
-+ 二叉树 BinTree
++ 二叉树 BinaryTree
++ 有向图——邻接矩阵AdjMatrixGraph
