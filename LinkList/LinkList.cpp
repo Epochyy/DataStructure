@@ -1,4 +1,4 @@
-// LinkList.cpp : 定义控制台应用程序的入口点。
+// LinkList.cpp
 //
 
 #include "stdafx.h"
